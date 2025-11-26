@@ -1,0 +1,8 @@
+opencv-contrib-python>=4.8.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+jupyter>=1.0.0
+notebook>=7.0.0
+scipy>=1.11.0
+# open3d>=0.17.0  # Will be needed for Week 2+ (not yet available for Python 3.14)
