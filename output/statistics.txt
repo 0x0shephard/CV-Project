@@ -1,0 +1,22 @@
+Feature Matching Results
+============================================================
+
+Image 1: WhatsApp Image 2025-11-13 at 14.35.59.jpeg
+Image 2: WhatsApp Image 2025-11-13 at 14.36.00 (1).jpeg
+
+Keypoints detected:
+  Image 1: 3230
+  Image 2: 2796
+
+Feature matches: 290
+Match rate: 10.4%
+
+Match quality:
+  Best distance: 48.01
+  Worst distance: 265.40
+  Average distance: 142.95
+  Median distance: 137.50
+
+Parameters:
+  Detector: SIFT
+  Ratio threshold: 0.75

@@ -1,0 +1,35 @@
+
+Week 1 Feature Matching Results
+================================
+
+Date: November 13, 2025
+Detector: SIFT
+Ratio Threshold: 0.75
+
+Image 1: ../Data/WhatsApp Image 2025-11-13 at 14.35.59.jpeg
+  - Shape: (1280, 960, 3)
+  - Keypoints detected: 3230
+
+Image 2: ../Data/WhatsApp Image 2025-11-13 at 14.36.00 (1).jpeg
+  - Shape: (1280, 960, 3)
+  - Keypoints detected: 2796
+
+Matching Results:
+  - Total good matches: 293
+  - Match rate: 10.5%
+
+Match Quality:
+  - Min distance: 48.01
+  - Max distance: 321.55
+  - Mean distance: 144.47
+  - Median distance: 140.00
+  - Std deviation: 47.42
+
+Saved Files:
+  - matched_points1.npy: 293 points
+  - matched_points2.npy: 293 points
+  - feature_matches.jpg: Visualization
+  - keypoints_image1.jpg: Keypoints on image 1
+  - keypoints_image2.jpg: Keypoints on image 2
+
+Status: ✅ Ready for Week 2 (Two-View Reconstruction)

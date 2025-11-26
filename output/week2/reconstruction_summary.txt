@@ -1,0 +1,40 @@
+
+================================================================================
+WEEK 2: TWO-VIEW RECONSTRUCTION SUMMARY
+================================================================================
+
+SOURCE IMAGES:
+  Image 1: WhatsApp Image 2025-11-13 at 14.35.59.jpeg
+  Image 2: WhatsApp Image 2025-11-13 at 14.36.00 (1).jpeg
+  Resolution: 960 x 1280
+
+FEATURE MATCHING:
+  Initial matches: 1,258
+  Inliers (RANSAC): 1,145 (91.0%)
+  Final (cheirality): 318
+
+CAMERA INTRINSICS:
+  Focal length: 1280.00 pixels
+  Principal point: (480.00, 640.00)
+
+CAMERA POSE:
+  Rotation angle: 9.83°
+  Euler (XYZ): [0.56°, -9.61°, 1.92°]
+  Translation: [0.218, 0.058, -0.974]
+
+3D RECONSTRUCTION:
+  Triangulated: 318
+  After filtering: 286
+  X: [-5.910, 2.735]
+  Y: [-4.464, 14.500]
+  Z: [13.869, 47.957]
+  Mean depth: 34.281
+
+OUTPUT FILES:
+  PLY: reconstruction.ply
+  3D visualization: 3d_visualization.png
+  2D scatter plots: 2d_scatter_plots.png
+  Source images: WhatsApp Image 2025-11-13 at 14.35.59.jpeg, WhatsApp Image 2025-11-13 at 14.36.00 (1).jpeg
+  Directory: ../output/week2
+
+================================================================================
