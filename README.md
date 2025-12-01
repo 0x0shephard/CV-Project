@@ -8,24 +8,51 @@ Muhammad Jon Raza
 ## Project Overview
 Building a Photosynth/Matterport-style 3D reconstruction and virtual tour system from 2D photographs.
 
-## Current Status: Week 1 - Feature Matching ✅
+## Current Status: Week 3 - Multi-View SfM ✅
 
-### Week 1 Deliverable
+### Completed Milestones
+
+#### Week 1: Feature Matching ✅
 - ✅ Feature detection using SIFT/ORB
 - ✅ Feature matching with Lowe's ratio test
 - ✅ Visualization of matched features between image pairs
 
+#### Week 2: Two-View Reconstruction ✅
+- ✅ Essential matrix estimation with RANSAC
+- ✅ Camera pose recovery with cheirality check
+- ✅ 3D point triangulation
+- ✅ PLY export for point cloud visualization
+
+#### Week 3: Multi-View SfM & Bundle Adjustment ✅
+- ✅ Incremental camera localization using PnP (Perspective-n-Point)
+- ✅ Growing 3D map through triangulation
+- ✅ Bundle Adjustment for global refinement
+- ✅ Before/after comparison visualizations
+- ✅ Professional modular code structure
+
 ## Project Structure
 ```
 Project/
-├── src/
-│   └── feature_matching.py    # Feature detection and matching module
-├── Data/                       # Input images for reconstruction
-├── output/                     # Generated outputs (matches, point clouds, etc.)
+├── src/                          # Modular Python source code
+│   ├── __init__.py              # Package initialization
+│   ├── feature_matching.py     # Feature detection and matching
+│   ├── two_view_geometry.py    # Two-view reconstruction
+│   ├── incremental_sfm.py      # Incremental SfM with PnP
+│   ├── bundle_adjustment.py    # Bundle Adjustment optimization
+│   ├── visualization.py        # 3D visualization utilities
+│   ├── io_utils.py             # I/O operations (load images, save PLY)
+│   └── sfm_pipeline.py         # Complete pipeline orchestration
+├── Data/                        # Input images for reconstruction
+├── output/                      # Generated outputs
+│   ├── week2/                  # Two-view reconstruction results
+│   └── week3/                  # Multi-view SfM results
 ├── notebooks/
-│   └── week1_demo.ipynb       # Week 1 demonstration notebook
-├── requirements.txt            # Python dependencies
-└── README.md                   # This file
+│   ├── week1_demo.ipynb        # Week 1: Feature matching
+│   ├── week2_demo.ipynb        # Week 2: Two-view reconstruction (embedded in week1)
+│   └── week3_demo.ipynb        # Week 3: Multi-view SfM & BA
+├── requirements.txt             # Python dependencies
+├── README.md                    # This file
+└── COMPREHENSIVE_GUIDE.md       # Detailed technical documentation
 ```
 
 ## Setup Instructions
@@ -47,65 +74,101 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Week 1: Feature Matching
+### Quick Start: Run Complete Pipeline
 
-#### Option 1: Command Line
 ```bash
-# Activate virtual environment first
-source venv/bin/activate
+# Activate virtual environment
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Run feature matching on two images
-python src/feature_matching.py "Data/WhatsApp Image 2025-11-13 at 14.35.58.jpeg" "Data/WhatsApp Image 2025-11-13 at 14.35.59.jpeg" output/matches.jpg
+# Run the complete SfM pipeline on your images
+python -m src.sfm_pipeline Data --output output/week3 --max-images 10
+
+# This will:
+# - Load images from Data/ directory
+# - Initialize from two views
+# - Incrementally add remaining views with PnP
+# - Apply Bundle Adjustment for refinement
+# - Export PLY files and visualizations
 ```
+
+### Week 3: Multi-View SfM & Bundle Adjustment
+
+#### Option 1: Interactive Notebook (Recommended)
+```bash
+jupyter notebook notebooks/week3_demo.ipynb
+```
+This provides a complete walkthrough with visualizations at each step.
 
 #### Option 2: Python Script
 ```python
-from src.feature_matching import find_and_visualize_matches
+from src.sfm_pipeline import SfMPipeline
 
-results = find_and_visualize_matches(
-    img1_path="Data/image1.jpeg",
-    img2_path="Data/image2.jpeg",
-    detector_type='SIFT',  # or 'ORB'
-    ratio_threshold=0.75,
-    num_matches_to_show=50,
-    save_path="output/matches.jpg"
+# Create pipeline
+pipeline = SfMPipeline(
+    image_dir="Data",
+    output_dir="output/week3"
 )
 
-print(f"Found {len(results['matches'])} good matches")
+# Run complete pipeline
+stats = pipeline.run_full_pipeline(
+    image_pattern="*.jpg",
+    max_images=10,
+    detector_type='SIFT',
+    run_ba=True
+)
+
+print(f"Reconstructed {stats['n_cameras']} cameras")
+print(f"Generated {stats['n_points']} 3D points")
 ```
 
-#### Option 3: Jupyter Notebook
+#### Option 3: Command Line with Options
 ```bash
+# Process first 15 images with SIFT features
+python -m src.sfm_pipeline Data --output output/week3 --max-images 15 --detector SIFT
+
+# Process all images without Bundle Adjustment
+python -m src.sfm_pipeline Data --output output/my_reconstruction --no-ba
+
+# Custom image pattern
+python -m src.sfm_pipeline Data --pattern "*.png" --output output/week3
+```
+
+### Previous Weeks
+
+#### Week 1: Feature Matching
+```bash
+# See notebooks/week1_demo.ipynb for feature matching demonstrations
 jupyter notebook notebooks/week1_demo.ipynb
 ```
 
-#### Option 4: Batch Process All Pairs (22 images → 11 pairs)
-```bash
-# Process all consecutive image pairs in the Data folder
-python src/process_all_pairs.py Data output SIFT
-
-# This will:
-# - Match all consecutive image pairs
-# - Generate comparison visualizations
-# - Identify the best pair for Week 2
-# - Save all results to output/ folder
-```
+#### Week 2: Two-View Reconstruction
+Results are embedded in Week 1 notebook and serve as initialization for Week 3.
 
 ## Features Implemented
 
-### Feature Detection
-- **SIFT (Scale-Invariant Feature Transform)**: Robust to scale and rotation changes
-- **ORB (Oriented FAST and Rotated BRIEF)**: Faster alternative to SIFT
+### Week 1: Feature Matching
+- **SIFT/ORB Detection**: Scale and rotation invariant feature detection
+- **Lowe's Ratio Test**: Robust feature match filtering
+- **Visualization**: Keypoint and match visualizations
 
-### Feature Matching
-- **Lowe's Ratio Test**: Filters matches by comparing distances of nearest and second-nearest neighbors
-- **FLANN-based Matcher**: Fast approximate nearest neighbor matching for SIFT
-- **Brute Force Matcher**: Hamming distance matching for ORB
+### Week 2: Two-View Geometry
+- **Essential Matrix Estimation**: Using RANSAC for robustness
+- **Pose Recovery**: Cheirality check to disambiguate camera pose
+- **Triangulation**: 3D point reconstruction from two views
+- **PLY Export**: Point cloud export for external visualization
 
-### Visualization
-- Keypoint detection visualization with size and orientation
-- Side-by-side feature matching visualization
-- Statistics and match quality metrics
+### Week 3: Incremental SfM
+- **PnP Camera Localization**: Estimate new camera poses using 2D-3D correspondences
+- **Incremental Triangulation**: Grow 3D map by adding new views
+- **Bundle Adjustment**: Global optimization using sparse least squares
+  - Simultaneous refinement of all cameras and points
+  - Minimize reprojection error across all observations
+  - Scipy-based optimization with Jacobian sparsity
+- **Professional Code Structure**: Modular design following software engineering best practices
+- **Comprehensive Visualizations**:
+  - Multiple viewpoint renderings
+  - Camera trajectory plots
+  - Before/after BA comparisons
 
 ## Data Collection Guidelines
 
@@ -119,9 +182,11 @@ For best results when capturing your own images:
 
 ## Upcoming Milestones
 
-- **Week 2**: Two-View Reconstruction (Essential Matrix, Pose Recovery, Triangulation)
-- **Week 3**: Multi-View SfM with PnP and Bundle Adjustment
 - **Week 4**: Interactive Photosynth-style Visualization
+  - View graph construction
+  - Smooth camera transitions (lerp/slerp)
+  - Three.js-based web viewer
+  - Image cross-fading during navigation
 - **Week 5**: Final Report and Complete Submission
 
 ## Dependencies
@@ -152,9 +217,23 @@ Ensure your image paths are correct and images are in a supported format (JPEG, 
 
 ## Output Files
 
-- `output/matches.jpg`: Visualization of feature matches between image pairs
-- `output/keypoints1.jpg`: First image with detected keypoints
-- `output/keypoints2.jpg`: Second image with detected keypoints
+### Week 1 Output
+- `output/pair_XX_matches.jpg`: Feature match visualizations
+- `output/all_pairs_summary.csv`: Statistics for all image pairs
+
+### Week 2 Output
+- `output/week2/reconstruction.ply`: 3D point cloud from two views
+- `output/week2/3d_visualization.png`: Multiple viewpoint renderings
+
+### Week 3 Output
+- `output/week3/reconstruction_two_view.ply`: Initial 2-view reconstruction
+- `output/week3/reconstruction_before_ba.ply`: Before bundle adjustment
+- `output/week3/reconstruction_after_ba.ply`: After bundle adjustment (refined)
+- `output/week3/reconstruction_refined.ply`: Final result (same as after BA)
+- `output/week3/reconstruction_multiview.png`: Multiple viewpoints of final reconstruction
+- `output/week3/camera_trajectory.png`: Estimated camera path
+- `output/week3/ba_comparison.png`: Before/after comparison
+- `output/week3/reconstruction_summary.txt`: Detailed statistics
 
 ## References
 
