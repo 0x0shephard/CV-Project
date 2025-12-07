@@ -3,7 +3,7 @@
 This project implements a complete Structure from Motion pipeline, from feature matching to 3D reconstruction and interactive visualization.
 
 ## Author
-Muhammad Jon Raza
+Muhammad Jon Raza, Hadi Shahzad
 
 ## Project Overview
 Building a Photosynth/Matterport-style 3D reconstruction and virtual tour system from 2D photographs.
