@@ -2,7 +2,7 @@
   "cameras": [
     {
       "id": 0,
-      "filename": "dslr_images/DSC_0803.JPG",
+      "filename": "DSC_0803.JPG",
       "position": [
         -0.5457442514571151,
         -3.1711660862032742,
@@ -23,7 +23,7 @@
     },
     {
       "id": 1,
-      "filename": "dslr_images/DSC_0816.JPG",
+      "filename": "DSC_0816.JPG",
       "position": [
         0.6812784360969963,
         -6.244197327835033,
@@ -45,7 +45,7 @@
     },
     {
       "id": 2,
-      "filename": "dslr_images/DSC_0817.JPG",
+      "filename": "DSC_0817.JPG",
       "position": [
         0.44920139149157895,
         -5.986809981596737,
@@ -67,7 +67,7 @@
     },
     {
       "id": 3,
-      "filename": "dslr_images/DSC_0818.JPG",
+      "filename": "DSC_0818.JPG",
       "position": [
         0.2950791306127313,
         -5.653325821067624,
@@ -89,7 +89,7 @@
     },
     {
       "id": 4,
-      "filename": "dslr_images/DSC_0819.JPG",
+      "filename": "DSC_0819.JPG",
       "position": [
         0.21693932984425984,
         -5.412906997213108,
@@ -111,7 +111,7 @@
     },
     {
       "id": 5,
-      "filename": "dslr_images/DSC_0820.JPG",
+      "filename": "DSC_0820.JPG",
       "position": [
         0.10369860484448919,
         -5.196871198016278,
@@ -133,7 +133,7 @@
     },
     {
       "id": 6,
-      "filename": "dslr_images/DSC_0821.JPG",
+      "filename": "DSC_0821.JPG",
       "position": [
         -0.008545907764960151,
         -4.93551129312282,
@@ -155,7 +155,7 @@
     },
     {
       "id": 7,
-      "filename": "dslr_images/DSC_0822.JPG",
+      "filename": "DSC_0822.JPG",
       "position": [
         -0.1356097840805903,
         -4.597646558435867,
@@ -177,7 +177,7 @@
     },
     {
       "id": 8,
-      "filename": "dslr_images/DSC_0823.JPG",
+      "filename": "DSC_0823.JPG",
       "position": [
         -0.2529404388703083,
         -4.208140447853784,
@@ -199,7 +199,7 @@
     },
     {
       "id": 9,
-      "filename": "dslr_images/DSC_0824.JPG",
+      "filename": "DSC_0824.JPG",
       "position": [
         -0.41638206351007273,
         -3.68663887314653,
@@ -221,7 +221,7 @@
     },
     {
       "id": 10,
-      "filename": "dslr_images/DSC_0825.JPG",
+      "filename": "DSC_0825.JPG",
       "position": [
         -0.5331984779034638,
         -3.2862079231853816,
@@ -243,7 +243,7 @@
     },
     {
       "id": 11,
-      "filename": "dslr_images/DSC_0826.JPG",
+      "filename": "DSC_0826.JPG",
       "position": [
         -0.5996975100328272,
         -2.73359248371579,
@@ -265,7 +265,7 @@
     },
     {
       "id": 12,
-      "filename": "dslr_images/DSC_0827.JPG",
+      "filename": "DSC_0827.JPG",
       "position": [
         -0.6040233291231502,
         -2.2871012269720645,
@@ -287,7 +287,7 @@
     },
     {
       "id": 13,
-      "filename": "dslr_images/DSC_0828.JPG",
+      "filename": "DSC_0828.JPG",
       "position": [
         -0.2865740396876985,
         -1.9531483665722411,
@@ -309,7 +309,7 @@
     },
     {
       "id": 14,
-      "filename": "dslr_images/DSC_0829.JPG",
+      "filename": "DSC_0829.JPG",
       "position": [
         -0.6850834402401197,
         -2.1095658815152665,
@@ -331,7 +331,7 @@
     },
     {
       "id": 15,
-      "filename": "dslr_images/DSC_0830.JPG",
+      "filename": "DSC_0830.JPG",
       "position": [
         -1.2193110607557454,
         -2.3748789171133065,
@@ -353,7 +353,7 @@
     },
     {
       "id": 16,
-      "filename": "dslr_images/DSC_0831.JPG",
+      "filename": "DSC_0831.JPG",
       "position": [
         -1.8251917262473065,
         -2.5392868817296583,
@@ -375,7 +375,7 @@
     },
     {
       "id": 17,
-      "filename": "dslr_images/DSC_0832.JPG",
+      "filename": "DSC_0832.JPG",
       "position": [
         -1.495519181014056,
         -3.112055515802736,
@@ -397,7 +397,7 @@
     },
     {
       "id": 18,
-      "filename": "dslr_images/DSC_0833.JPG",
+      "filename": "DSC_0833.JPG",
       "position": [
         -1.1931528482504643,
         -3.3142244592558723,
@@ -419,7 +419,7 @@
     },
     {
       "id": 19,
-      "filename": "dslr_images/DSC_0834.JPG",
+      "filename": "DSC_0834.JPG",
       "position": [
         -0.9412998160678641,
         -3.862800960297803,
@@ -441,7 +441,7 @@
     },
     {
       "id": 20,
-      "filename": "dslr_images/DSC_0835.JPG",
+      "filename": "DSC_0835.JPG",
       "position": [
         -0.639398676609432,
         -4.426080099545857,
@@ -463,7 +463,7 @@
     },
     {
       "id": 21,
-      "filename": "dslr_images/DSC_0839.JPG",
+      "filename": "DSC_0839.JPG",
       "position": [
         1.0440650855581988,
         -5.248580240301102,
@@ -485,7 +485,7 @@
     },
     {
       "id": 22,
-      "filename": "dslr_images/DSC_0840.JPG",
+      "filename": "DSC_0840.JPG",
       "position": [
         0.8912266093012243,
         -4.404471064479426,
@@ -507,7 +507,7 @@
     },
     {
       "id": 23,
-      "filename": "dslr_images/DSC_0841.JPG",
+      "filename": "DSC_0841.JPG",
       "position": [
         0.6921885469100564,
         -3.611937447135563,
@@ -529,7 +529,7 @@
     },
     {
       "id": 24,
-      "filename": "dslr_images/DSC_0842.JPG",
+      "filename": "DSC_0842.JPG",
       "position": [
         0.3900025695617128,
         -2.649785474527546,
@@ -551,7 +551,7 @@
     },
     {
       "id": 25,
-      "filename": "dslr_images/DSC_0843.JPG",
+      "filename": "DSC_0843.JPG",
       "position": [
         -0.4372210567481471,
         -1.8979056831016472,
