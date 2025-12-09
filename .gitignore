@@ -1,0 +1,7 @@
+Data/
+dslr_images/
+output/
+venv/
+__pycache__/
+.DS_Store
+*.mp4
