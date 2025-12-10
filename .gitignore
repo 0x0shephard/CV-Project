@@ -1,7 +1,9 @@
 Data/
 dslr_images/
 output/
+viewer/assets/images/
 venv/
 __pycache__/
 .DS_Store
 *.mp4
+*.ipynb
